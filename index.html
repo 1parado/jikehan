@@ -167,18 +167,6 @@ h1 .line:nth-child(2) span{
 .coord-tl{ top:84px; left:4vw; } .coord-br{ bottom:6vh; right:4vw; text-align:right; }
 .coord b{ color:var(--rose); font-weight:400; }
 
-/* mobile hero */
-.hero-float{
-  position:absolute; top:20vh; right:6vw; z-index:2; text-align:right;
-}
-.hero-float .big{ font-weight:900; font-size:clamp(38px,10vw,56px); line-height:1; letter-spacing:-.02em; }
-.hero-float .big em{ font-style:normal; color:var(--rose-hi); }
-.hero-float .lbl{
-  font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.26em;
-  text-transform:uppercase; color:var(--text-dim); margin-top:6px;
-}
-.hero-float .rule{ width:52px; height:2px; background:var(--rose); margin:10px 0 0 auto; box-shadow:0 0 8px rgba(217,169,188,.6); }
-@media (min-width:721px){ .hero-float{ display:none; } }
 @media (max-width:720px){
   #hero{ padding:0 6vw 5vh; }
   .hero-tag{ flex-direction:column; align-items:flex-start; gap:6px; font-size:10px; letter-spacing:.18em; margin-bottom:3vh; padding-bottom:12px; }
@@ -279,13 +267,10 @@ section.block{ padding:12vh 4vw; position:relative; z-index:1; }
   .sec-head::before{ transition:none; }
 }
 @media (max-width:860px){
-  .acts{ grid-template-columns:1fr 1fr; }
-  .act{ padding:22px 16px 26px 0 !important; border-bottom:1px solid var(--line); }
-  .act:nth-child(2n){ border-right:none; padding-left:16px !important; }
-}
-@media (max-width:520px){
   .acts{ grid-template-columns:1fr; }
-  .act{ border-right:none !important; padding-left:0 !important; }
+  .act{ padding:22px 0 26px 0 !important; border-right:none !important; border-bottom:1px solid var(--line); }
+  .act:last-child{ border-bottom:none; }
+  .act .no{ font-size:34px; }
 }
 
 /* system strip */
@@ -415,12 +400,6 @@ footer{ padding:12vh 4vw 4vh; position:relative; z-index:1; }
   <canvas id="particles" aria-hidden="true"></canvas>
   <div class="coord coord-tl">SYS.SCAN — <b>ACTIVE</b></div>
   <div class="coord coord-br">PIO.JIKEHAN<br>OBSSESSION.LOOP</div>
-
-  <div class="hero-float" aria-hidden="true">
-    <div class="big">0<em>4</em></div>
-    <div class="lbl">Acts · Narrative<br>Realtime System</div>
-    <div class="rule"></div>
-  </div>
 
   <div class="hero-inner">
     <div class="hero-tag">
