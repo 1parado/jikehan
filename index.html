@@ -330,6 +330,41 @@ footer{ background:var(--dark); color:#e8e5df; padding:12vh 4vw 4vh; }
 .fact{ transition:padding-left .3s cubic-bezier(.2,.7,.2,1); }
 .fact:hover{ padding-left:10px; }
 .fact:hover .k{ color:var(--red); }
+
+/* ---------- mobile hero polish ---------- */
+@media (max-width:720px){
+  #hero{
+    min-height:100svh;
+    padding:0 6vw 5vh;
+    justify-content:flex-end;
+  }
+  .hero-tag{
+    flex-direction:column; align-items:flex-start; gap:6px;
+    font-size:10px; letter-spacing:.18em; margin-bottom:3vh;
+    padding-bottom:12px;
+  }
+  h1{ font-size:clamp(64px, 21vw, 110px); line-height:.95; }
+  .hero-sub{ margin-top:3vh; }
+  .hero-sub .desc{ font-size:14.5px; line-height:1.7; max-width:100%; }
+  .scroll-hint{ display:none; }
+  /* floating meta card — fills the upper space with content, not void */
+  .hero-float{
+    position:absolute; top:20vh; right:6vw; z-index:1;
+    text-align:right;
+  }
+  .hero-float .big{
+    font-weight:900; font-size:clamp(38px,10vw,56px); line-height:1;
+    color:var(--ink); letter-spacing:-.02em;
+  }
+  .hero-float .lbl{
+    font-family:'Space Mono',monospace; font-size:9px; letter-spacing:.26em;
+    text-transform:uppercase; color:var(--grey-d); margin-top:6px;
+  }
+  .hero-float .rule{
+    width:52px; height:2px; background:var(--red); margin:10px 0 0 auto;
+  }
+}
+@media (min-width:721px){ .hero-float{ display:none; } }
 </style>
 </head>
 <body>
@@ -350,7 +385,12 @@ footer{ background:var(--dark); color:#e8e5df; padding:12vh 4vw 4vh; }
 <!-- ================= HERO ================= -->
 <header id="hero">
   <canvas id="particles" aria-hidden="true"></canvas>
-  <div class="hero-inner">
+  <div class="hero-float" aria-hidden="true">
+      <div class="big">04</div>
+      <div class="lbl">Acts · Narrative<br>Realtime System</div>
+      <div class="rule"></div>
+    </div>
+    <div class="hero-inner">
     <div class="hero-tag">
       <span>Experimental Media · Digital Media Art</span>
       <span>Portfolio 2026</span>
